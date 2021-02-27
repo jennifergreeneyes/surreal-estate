@@ -1,21 +1,23 @@
-import "../styles/App.css";
+import React from 'react';
+import '../styles/App.css';
+import { Route, Switch } from 'react-router-dom';
+import NavBar from './NavBar';
+import Properties from './Properties';
+import AddProperty from './AddProperty';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>SurReal Estate</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <NavBar />
+    <Switch>
+      <Route exact path="/">
+        <Properties />
+      </Route>
+      <Route exact path="/add-property">
+        <AddProperty />
+      </Route>
+    </Switch>
+    <h1>SurReal Estate</h1>
+  </div>
+);
 
 export default App;
