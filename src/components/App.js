@@ -12,7 +12,7 @@ const App = () => (
       <Route exact path="/">
         <Properties />
       </Route>
-      <Route exact path="/add-property">
+      <Route exact path="/AddProperty">
         <AddProperty />
       </Route>
     </Switch>
